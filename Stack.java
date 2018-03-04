@@ -1,5 +1,3 @@
-package algo.list;
-
 public class Stack<T> extends LinkedList<T>{
 	private boolean isEmpty;
 	public Stack() {
