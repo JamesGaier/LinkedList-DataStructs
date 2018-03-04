@@ -1,3 +1,6 @@
+package algo.list;
+
+
 public class LinkedList<T> {
 	protected Node root;
 	public void add(T data) {
@@ -29,6 +32,23 @@ public class LinkedList<T> {
 			size++;
 		}
 		return size;
+	}
+	public void remove(int index) {
+		if(index == 0) {
+			root = root.next;
+		}
+		Node currentNode = root;
+		Node previousNode = root;
+		for(int i = 0; i < index; i++) {
+			currentNode = currentNode.next;
+			previousNode = (i == index-1) ? previousNode:previousNode.next;
+		}
+		if(index == size()) {
+			previousNode.next = null;
+		}else {
+			previousNode.next = currentNode.next;
+		}
+		
 	}
 	class Node {
 		private Object data;

@@ -1,3 +1,5 @@
+package algo.list;
+
 public class DoublyLinkedList<T> {
 	protected Node head;
 	protected Node tail;
@@ -25,6 +27,24 @@ public class DoublyLinkedList<T> {
 	}
 	public int size() {
 		return size;
+	}
+	public void remove(int index) {
+		if(index == 0) {
+			head = head.right;
+			return;
+		}
+		Node currentNode = head;
+		for(int i = 0; i < index; i++) {
+			currentNode = currentNode.right;
+		}
+		if(currentNode.equals(tail)) {
+			currentNode.left.right = null;
+			tail = currentNode.left;
+		}else {
+			currentNode.left.right = currentNode.right;
+			currentNode.right.left = currentNode.left;
+			
+		}
 	}
 	class Node{
 		private Object data;
