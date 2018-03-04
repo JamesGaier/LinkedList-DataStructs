@@ -1,5 +1,3 @@
-package algo.list;
-
 public class DoublyLinkedList<T> {
 	protected Node head;
 	protected Node tail;
