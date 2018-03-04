@@ -1,6 +1,3 @@
-package algo.list;
-
-
 public class LinkedList<T> {
 	protected Node root;
 	public void add(T data) {
