@@ -1,5 +1,3 @@
-package algo.list;
-
 public class Queue<T> extends DoublyLinkedList<T>{
 	public void enqueue(T data) {
 		Node insertionNode = new Node(data);
