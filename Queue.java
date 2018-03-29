@@ -12,6 +12,7 @@ public class Queue<T> extends DoublyLinkedList<T>{
 	@SuppressWarnings("unchecked")
 	public T dequeue() {
 		Node temp = tail;
+		//Switch to remove from LEFT side (head.getRight())
 		tail = tail.getLeft();
 		return (T)temp.getData();
 	}
